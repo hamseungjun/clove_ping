@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <!-- 이미지 섹션 -->
+        <div class="image-section">
+            <img src="{{ image_path }}" alt="분류된 이미지" class="result-image">
+        </div>
+
+        <!-- 텍스트 및 설명 섹션 -->
+        <div class="info-section">
+            <h2>{{ content_text }}</h2>
+            <h3>그 이름의 특징들:</h3>
+            <p>클래스 분류 결과: {{ description }}</p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Camera Capture</title>
+    <!-- main.js를 static 경로에서 불러오기 -->
+    <script src="/static/main.js"></script>
+<style>
+        #container{
+            width: 420px; /* 컨테이너 너비 지정 */
+            margin: 0 auto; /* 중앙 정렬 */
+            text-align: center; /* 요소들을 중앙으로 정렬 */
+        }
+        video, canvas {
+            width: 400px; /* 너비 300px */
+            height: 300px; /* 3:4 비율을 위한 높이 400px */
+        }
+         video {
+            transform: scaleX(-1); /* 좌우 반전 */
+        }
+        button{
+            width: 300px;
+            height: 100px;
+            background: lightpink;
+            border: none;
+            border-radius: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id='container'>
+        <div>
+            <video id="cameraview" width="400" height="300" autoplay playsinline></video>
+            <canvas id="canvas" width="400" height="300" style="display:none;"></canvas>
+        </div>
+
+        <button id="captureButton">Capture</button><!-- 캡처 버튼 -->
+    </div>
+</body>
+</html>

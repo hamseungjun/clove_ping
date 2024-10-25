@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <style>
+        .container {
+            text-align: center; /* 컨테이너 안의 요소들을 중앙 정렬 */
+        }
+        .result-image {
+            width: 600px; /* 이미지 너비 */
+            height: 500px; /* 이미지 높이 */
+            display: block;
+            margin: 0 auto; /* 중앙 정렬 */
+        }
+        .info-section {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Classification Result</h1>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>classfication of Convultion Neural NetWork</p>
+    </footer>
+</body>
+</html>
